@@ -27,20 +27,23 @@ def send_signal_msg(sig):
     # sig is dict with pair,direction,entry,sl,tp,confidence,reason
     txt = (
         f"📈 Signal — {sig['pair']}\n"
-        f"Side: {sig['direction']}\n"
-        f"Entry: {sig['entry']}\n"
-        f"SL: {sig['sl']} | TP: {sig['tp']}\n"
-        f"Confidence: {sig.get('confidence', 70)}%\n"
-        f"Reason: {sig.get('reason','')}"
+        f"📍DIRECTION: {sig['direction']}\n"
+        f"🚀Entry: {sig['entry']}\n"
+        f"🎯Target: {sig['tp']}\n"
+        f"⛔Stop Loss: {sig['sl']}\n"
+        f"🤖Confidence: {sig.get('confidence', 70)}%\n"
+        f"®️Reason: {sig.get('reason','')}"
     )
     safe_send(txt)
 
 def send_exit_msg(trade, status, pnl):
     txt = (
-        f"🔔 Exit — {trade['pair']} ({status})\n"
-        f"Dir: {trade['direction']} Entry: {trade['entry']}\n"
-        f"SL: {trade['sl']} TP: {trade['tp']}\n"
-        f"PnL: {round(pnl,6)}"
+        f"❇️ Exit — {trade['pair']} ({status})\n"
+        f"Direction: {trade['direction']}\n"
+        f"Entry: {trade['entry']}\n"
+        f"TP: {trade['tp']}\n"
+        f"SL: {trade['sl']}\n"
+        f"🅿️PnL: {round(pnl,6)}"
     )
     safe_send(txt)
 
