@@ -8,7 +8,7 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
 # Pairs (strictly these)
-PAIRS = ["YALA/USDT", "RUNE/USDT"]
+PAIRS = ["YALA/USDT", "RUNE/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT"]
 
 # Timeframe & cadence
 TIMEFRAME = "15m"
